@@ -21,7 +21,7 @@ How to install and run HCJedit
 -------------------------------
 #### Download
 
-Installers for the latest stable build for Mac, Windows and Linux (Debian/Ubuntu) can be [downloaded here](https://Brackets-cont.github.io/).
+Installers for the latest stable build for Mac, Windows and Linux (Debian/Ubuntu) can be [downloaded here](https://a-childs-encyclopedia.github.io/-HCJedit-/).
 
 #### Usage
 
