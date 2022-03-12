@@ -2,7 +2,7 @@
     "config": {
         "app_title": "Brackets",
         "app_name_about": "Brackets",
-        "about_icon": "styles/images/brackets_icon.svg",
+        "about_icon": "styles/images/H.svg",
         "how_to_use_url": "https://github.com/brackets-cont/brackets/wiki/How-to-Use-Brackets",
         "support_url": "https://github.com/brackets-cont/brackets/wiki/Troubleshooting",
         "suggest_feature_url": "https://github.com/brackets-cont/brackets/discussions/categories/feature-request",
