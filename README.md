@@ -22,7 +22,7 @@ How to install and run HCJedit
 #### Download
 
 Installers for the latest stable build for Mac, Windows and Linux (Debian/Ubuntu) can be [downloaded here](https://a-childs-encyclopedia.github.io/-HCJedit-/).
-
+**Actually the builds that support linux are really old so my recommendation is to just run it under wine. It works great**
 #### Usage
 
 By default, HCJedit opens a folder containing some simple "Getting Started" content.
