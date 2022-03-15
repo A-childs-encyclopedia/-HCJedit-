@@ -5,7 +5,6 @@ HCJedit is a modern open-source code editor for HTML, CSS
 and JavaScript that's *built* in HTML, CSS and JavaScript.
 
 This is a fork of a [project](https://github.com/adobe/Brackets) previously maintained by Adobe.
-We might change names in the future.
 
 What makes HCJedit different from other web code editors?
 
