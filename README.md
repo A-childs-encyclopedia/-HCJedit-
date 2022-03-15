@@ -81,6 +81,6 @@ Although HCJedit is built in HTML/CSS/JS, it currently runs as a desktop
 application in a thin native shell, so that it can access your local files.
 (If you just try to open the index.html file in a browser, it won't work yet.)
 The native shell for HCJedit lives in a separate repo, 
-[HCJedit-cont/HCJedit-shell](https://github.com/Brackets-cont/Brackets-shell/).
+[HCJedit-cont/HCJedit-shell](https://github.com/A-childs-encyclopedia/HCJedit-shell).
 
 Please note that this project is released with a [Contributor Code of Conduct](https://github.com/Brackets-cont/Brackets/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
