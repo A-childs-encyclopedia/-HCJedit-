@@ -4,7 +4,9 @@ Welcome to HCJedit! [![Build Status](https://travis-ci.org/adobe.svg?branch=mast
 HCJedit is a modern open-source code editor for HTML, CSS
 and JavaScript that's *built* in HTML, CSS and JavaScript.
 
-This is a fork of a [project](https://github.com/adobe/Brackets) previously maintained by Adobe.
+This is a fork of a [project](https://github.com/brackets-cont/brackets) currently maintained by Brackets-cont.
+**please wait for unique features**
+
 
 What makes HCJedit different from other web code editors?
 
