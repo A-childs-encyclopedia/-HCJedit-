@@ -7,7 +7,6 @@ and JavaScript that's *built* in HTML, CSS and JavaScript.
 This is a fork of a [project](https://github.com/brackets-cont/brackets) currently maintained by Brackets-cont.
 **please wait for unique features**
 
-**Note: this repo is now managed by quark-org**
 
 What makes HCJedit different from other web code editors?
 
