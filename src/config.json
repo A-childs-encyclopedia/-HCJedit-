@@ -27,9 +27,9 @@
         "notification_info_url": "https://getupdates.brackets.io/dev/notifications/<locale>.json",
         "buildtype": "dev"
     },
-    "name": "Brackets",
-    "version": "2.1.1-0",
-    "apiVersion": "2.1.1",
+    "name": "HCJedit",
+    "version": "2.1.2-0",
+    "apiVersion": "2.1.2",
     "homepage": "http://brackets.io",
     "issues": {
         "url": "http://github.com/brackets-cont/brackets/issues"
