@@ -23,7 +23,7 @@ How to install and run HCJedit
 -------------------------------
 #### Download
 
-Installers for the latest stable build for Mac, Windows can be [downloaded here](https://a-childs-encyclopedia.github.io/-HCJedit-/).
+Installers for the latest stable build for Mac and Windows can be [downloaded here](https://a-childs-encyclopedia.github.io/-HCJedit-/).
 
 #### Usage
 
