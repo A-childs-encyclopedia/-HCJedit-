@@ -1,26 +1,3 @@
-/*
- * Copyright (c) 2012 - present Adobe Systems Incorporated. All rights reserved.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
- *
- */
-
 define(function (require, exports, module) {
     "use strict";
 
@@ -49,14 +26,6 @@ define(function (require, exports, module) {
         return ProjectManager.getAllFiles(ProjectManager.getLanguageFilter(["css", "less", "scss"]));
     }
 
-    /**
-     * Given a position in an HTML editor, returns the relevant selector for the attribute/tag
-     * surrounding that position, or "" if none is found.
-     * @param {!Editor} editor
-     * @param {!{line:Number, ch:Number}} pos
-     * @return {selectorName: {string}, reason: {string}}
-     * @private
-     */
     function _getSelectorName(editor, pos) {
         var tagInfo = HTMLUtils.getTagInfo(editor, pos),
             selectorName = "",
@@ -110,14 +79,7 @@ define(function (require, exports, module) {
         };
     }
 
-    /**
-     * @private
-     * Add a new rule for the given selector to the given stylesheet, then add the rule to the
-     * given inline editor.
-     * @param {string} selectorName The selector to create a rule for.
-     * @param {MultiRangeInlineEditor} inlineEditor The inline editor to display the new rule in.
-     * @param {string} path The path to the stylesheet file.
-     */
+  
     function _addRule(selectorName, inlineEditor, path) {
         DocumentManager.getDocumentForPath(path).done(function (styleDoc) {
             var newRuleInfo = CSSUtils.addRuleToDocument(styleDoc, selectorName, Editor.getUseTabChar(path), Editor.getSpaceUnits(path));
@@ -126,10 +88,7 @@ define(function (require, exports, module) {
         });
     }
 
-    /**
-     * @private
-     * Handle the "new rule" menu item by dispatching it to the handler for the focused inline editor.
-     */
+   
     function _handleNewRule() {
         var inlineEditor = MultiRangeInlineEditor.getFocusedMultiRangeInlineEditor();
         if (inlineEditor) {
@@ -152,17 +111,6 @@ define(function (require, exports, module) {
         return html;
     }
 
-    /**
-     * This function is registered with EditManager as an inline editor provider. It creates a CSSInlineEditor
-     * when cursor is on an HTML tag name, class attribute, or id attribute, find associated
-     * CSS rules and show (one/all of them) in an inline editor.
-     *
-     * @param {!Editor} editor
-     * @param {!{line:Number, ch:Number}} pos
-     * @return {?$.Promise} synchronously resolved with an InlineWidget; or error
-     *         {string} if pos is in tag but not in tag name, class attr, or id attr; or null if the
-     *         selection isn't even close to a context where we could provide anything.
-     */
     function htmlToCSSProvider(hostEditor, pos) {
 
         // Only provide a CSS editor when cursor is in HTML content
@@ -206,12 +154,7 @@ define(function (require, exports, module) {
             _addRule(selectorName, cssInlineEditor, fileInfo.fullPath);
         }
 
-        /**
-         * @private
-         * Checks to see if there are any stylesheets in the project, and returns the appropriate
-         * "no rules"/"no stylesheets" message accordingly.
-         * @return {$.Promise} a promise that is resolved with the message to show. Never rejected.
-         */
+        
         function _getNoRulesMsg() {
             var result = new $.Deferred();
             _getCSSFilesInProject().done(function (fileInfos) {
@@ -220,18 +163,12 @@ define(function (require, exports, module) {
             return result;
         }
 
-        /**
-         * @private
-         * Update the enablement of associated menu commands.
-         */
+       
         function _updateCommands() {
             _newRuleCmd.setEnabled(cssInlineEditor.hasFocus() && !newRuleButton.$button.hasClass("disabled"));
         }
 
-        /**
-         * @private
-         * Create a new rule on click.
-         */
+      
         function _handleNewRuleClick(e) {
             if (!newRuleButton.$button.hasClass("disabled")) {
                 if (cssFileInfos.length === 1) {
@@ -245,13 +182,7 @@ define(function (require, exports, module) {
             }
         }
 
-        /**
-         * @private
-         * Sort files with LESS/SCSS above CSS, and then within each grouping sort by path & filename
-         * (the same order we use for Find in Files)
-         * @param {!File} a, b
-         * @return {number}
-         */
+      
         function _fileComparator(a, b) {
             var aIsCSS = LanguageManager.getLanguageForPath(a.fullPath).getId() === "css",
                 bIsCSS = LanguageManager.getLanguageForPath(b.fullPath).getId() === "css";
@@ -264,10 +195,7 @@ define(function (require, exports, module) {
             }
         }
 
-        /**
-         * @private
-         * Prepare file list for display
-         */
+       
         function _prepFileList(files) {
             // First, sort list (the same ordering we use for the results list)
             files.sort(_fileComparator);
