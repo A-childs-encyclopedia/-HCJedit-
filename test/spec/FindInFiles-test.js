@@ -276,7 +276,7 @@ define(function (require, exports, module) {
 
             afterEach(closeSearchBar);
 
-            it("should find all occurences in project", function () {
+            it("should find all occurrences in project", function () {
                 openSearchBar();
                 executeSearch("foo");
 
