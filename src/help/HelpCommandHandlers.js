@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 - present Adobe Systems Incorporated. All rights reserved.
+ * Copyright (c) 2012 - present Cherrycream co.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
